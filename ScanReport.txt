@@ -1,0 +1,916 @@
+
+************************* Creating SiteMap **************************
+
+http://localhost/dvwa/dvwa/css/main.css
+http://localhost/dvwa/favicon.ico
+http://localhost/dvwa/
+http://localhost/dvwa/instructions.php
+http://localhost/dvwa/setup.php
+http://localhost/dvwa/vulnerabilities/brute/
+http://localhost/dvwa/css/main.css
+http://localhost/dvwa/vulnerabilities/exec/
+http://localhost/dvwa/vulnerabilities/csrf/
+http://localhost/dvwa/vulnerabilities/fi/?page=include.php
+http://localhost/dvwa/?page=file1.php
+http://localhost/dvwa/vulnerabilities/upload/
+http://localhost/dvwa/vulnerabilities/captcha/
+http://localhost/dvwa/vulnerabilities/sqli/
+http://localhost/dvwa/vulnerabilities/sqli_blind/
+http://localhost/dvwa/vulnerabilities/weak_id/
+http://localhost/dvwa/vulnerabilities/xss_d/
+http://localhost/dvwa/vulnerabilities/xss_r/
+http://localhost/dvwa/vulnerabilities/xss_s/
+http://localhost/dvwa/vulnerabilities/csp/
+http://localhost/dvwa/vulnerabilities/javascript/
+http://localhost/dvwa/security.php
+http://localhost/dvwa/phpinfo.php
+http://localhost/dvwa/about.php
+http://localhost/dvwa/docs/DVWA_v1.3.pdf
+http://localhost/dvwa/instructions.php?doc=PHPIDS-license
+http://localhost/dvwa/?doc=readme
+http://localhost/dvwa/?doc=PDF
+http://localhost/dvwa/?doc=changelog
+http://localhost/dvwa/?doc=copying
+http://localhost/dvwa/?doc=PHPIDS-license
+http://localhost/dvwa/?phpids=on
+http://localhost/dvwa/?test=%22><script>eval(window.name)</script>
+http://localhost/dvwa/ids_log.php
+http://localhost/dvwa/?page=file2.php
+http://localhost/dvwa/?page=file3.php
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] CSRF token found; Checking if token is verified
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/brute/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="GET">
+			Username:<br/>
+<input name="username" type="text"/><br/>
+			Password:<br/>
+<input autocomplete="off" name="password" type="password"/><br/>
+<br/>
+<input name="Login" type="submit" value="Login"/>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/brute/is vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form action="#" method="GET">
+			Username:<br/>
+<input name="username" type="text"/><br/>
+			Password:<br/>
+<input autocomplete="off" name="password" type="password"/><br/>
+<br/>
+<input name="Login" type="submit" value="Login"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/exec/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="post" name="ping">
+<p>
+				Enter an IP address:
+				<input name="ip" size="30" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/csrf/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="GET">
+			New password:<br/>
+<input autocomplete="off" name="password_new" type="password"/><br/>
+			Confirm new password:<br/>
+<input autocomplete="off" name="password_conf" type="password"/><br/>
+<br/>
+<input name="Change" type="submit" value="Change"/>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/csrf/is vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form action="#" method="GET">
+			New password:<br/>
+<input autocomplete="off" name="password_new" type="password"/><br/>
+			Confirm new password:<br/>
+<input autocomplete="off" name="password_conf" type="password"/><br/>
+<br/>
+<input name="Change" type="submit" value="Change"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/upload/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" enctype="multipart/form-data" method="POST">
+<input name="MAX_FILE_SIZE" type="hidden" value="100000"/>
+			Choose an image to upload:<br/><br/>
+<input name="uploaded" type="file"/><br/>
+<br/>
+<input name="Upload" type="submit" value="Upload"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/captcha/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="POST" style="display:none;">
+<h3>Change your password:</h3>
+<br/>
+<input name="step" type="hidden" value="1"/>
+			New password:<br/>
+<input autocomplete="off" name="password_new" type="password"/><br/>
+			Confirm new password:<br/>
+<input autocomplete="off" name="password_conf" type="password"/><br/>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<br/> <div class="g-recaptcha" data-sitekey="" data-theme="dark"></div>
+<br/>
+<input name="Change" type="submit" value="Change"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/sqli/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="GET">
+<p>
+				User ID:
+				<input name="id" size="15" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/sqli/is vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form action="#" method="GET">
+<p>
+				User ID:
+				<input name="id" size="15" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/sqli/ is vulnerable to SQL Injection. Security Risk: Severe.
+
+<form action="#" method="GET">
+<p>
+				User ID:
+				<input name="id" size="15" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/sqli_blind/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="GET">
+<p>
+				User ID:
+				<input name="id" size="15" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/sqli_blind/is vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form action="#" method="GET">
+<p>
+				User ID:
+				<input name="id" size="15" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/sqli_blind/ is vulnerable to SQL Injection. Security Risk: Severe.
+
+<form action="#" method="GET">
+<p>
+				User ID:
+				<input name="id" size="15" type="text"/>
+<input name="Submit" type="submit" value="Submit"/>
+</p>
+</form>
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/weak_id/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form method="post">
+<input type="submit" value="Generate"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/xss_d/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form method="GET" name="XSS">
+<select name="default">
+<script>
+					if (document.location.href.indexOf("default=") >= 0) {
+						var lang = document.location.href.substring(document.location.href.indexOf("default=")+8);
+						document.write("<option value='" + lang + "'>" + decodeURI(lang) + "</option>");
+						document.write("<option value='' disabled='disabled'>----</option>");
+					}
+					    
+					document.write("<option value='English'>English</option>");
+					document.write("<option value='French'>French</option>");
+					document.write("<option value='Spanish'>Spanish</option>");
+					document.write("<option value='German'>German</option>");
+				</script>
+</select>
+<input type="submit" value="Select"/>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/xss_d/is vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form method="GET" name="XSS">
+<select name="default">
+<script>
+					if (document.location.href.indexOf("default=") >= 0) {
+						var lang = document.location.href.substring(document.location.href.indexOf("default=")+8);
+						document.write("<option value='" + lang + "'>" + decodeURI(lang) + "</option>");
+						document.write("<option value='' disabled='disabled'>----</option>");
+					}
+					    
+					document.write("<option value='English'>English</option>");
+					document.write("<option value='French'>French</option>");
+					document.write("<option value='Spanish'>Spanish</option>");
+					document.write("<option value='German'>German</option>");
+				</script>
+</select>
+<input type="submit" value="Select"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/xss_r/ is highly vulnerable to XSS. Security Risk: High
+
+<form action="#" method="GET" name="XSS">
+<p>
+				What's your name?
+				<input name="name" type="text"/>
+<input type="submit" value="Submit"/>
+</p>
+</form>
+
+[***] The form is also vulnerable to CSRF due to the presence of XSS vulnerability. Security Risk: High
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/xss_r/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="GET" name="XSS">
+<p>
+				What's your name?
+				<input name="name" type="text"/>
+<input type="submit" value="Submit"/>
+</p>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/xss_r/is vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form action="#" method="GET" name="XSS">
+<p>
+				What's your name?
+				<input name="name" type="text"/>
+<input type="submit" value="Submit"/>
+</p>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[***] The following form in the link http://localhost/dvwa/vulnerabilities/xss_s/ is highly vulnerable to XSS. Security Risk: High
+
+<form "="" method="post" name="guestform">
+<table border="0" cellpadding="2" cellspacing="1" width="550">
+<tr>
+<td width="100">Name *</td>
+<td><input maxlength="10" name="txtName" size="30" type="text"/></td>
+</tr>
+<tr>
+<td width="100">Message *</td>
+<td><textarea cols="50" maxlength="50" name="mtxMessage" rows="3"></textarea></td>
+</tr>
+<tr>
+<td width="100"> </td>
+<td>
+<input name="btnSign" onclick="return validateGuestbookForm(this.form);" type="submit" value="Sign Guestbook">
+<input name="btnClear" onclick="return confirmClearGuestbook();" type="submit" value="Clear Guestbook"/>
+</input></td>
+</tr>
+</table>
+</form>
+
+[***] The form is also vulnerable to CSRF due to the presence of XSS vulnerability. Security Risk: High
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/xss_s/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form "="" method="post" name="guestform">
+<table border="0" cellpadding="2" cellspacing="1" width="550">
+<tr>
+<td width="100">Name *</td>
+<td><input maxlength="10" name="txtName" size="30" type="text"/></td>
+</tr>
+<tr>
+<td width="100">Message *</td>
+<td><textarea cols="50" maxlength="50" name="mtxMessage" rows="3"></textarea></td>
+</tr>
+<tr>
+<td width="100"> </td>
+<td>
+<input name="btnSign" onclick="return validateGuestbookForm(this.form);" type="submit" value="Sign Guestbook">
+<input name="btnClear" onclick="return confirmClearGuestbook();" type="submit" value="Clear Guestbook"/>
+</input></td>
+</tr>
+</table>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/csp/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form method="POST" name="csp">
+<p>You can include scripts from external sources, examine the Content Security Policy and enter a URL to include here:</p>
+<input id="include" name="include" size="50" type="text" value=""/>
+<input type="submit" value="Include"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/vulnerabilities/javascript/is vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form method="post" name="low_js">
+<input id="token" name="token" type="hidden" value=""/>
+<label for="phrase">Phrase</label> <input id="phrase" name="phrase" type="text" value="ChangeMe"/>
+<input id="send" name="send" type="submit" value="Submit"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] CSRF token found; Checking if token is verified
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[***] The following form in the Link http://localhost/dvwa/ids_log.phpis vulnerable to CSRF; Lack of csrf_token. Security Risk: High
+<form action="#" method="GET">
+<input name="clear_log" type="submit" value="Clear Log"/>
+</form>
+
+[***] The following form in the link http://localhost/dvwa/ids_log.phpis vulnerable to CSRF due to GET Request method. Security Risk: Low
+<form action="#" method="GET">
+<input name="clear_log" type="submit" value="Clear Log"/>
+</form>
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
+
+************************* Testing for XSS **************************
+
+
+[+] The link is not vulnerable to XSS.
+
+
+************************* Testing for CSRF *************************
+
+
+[+] The link is not vulnerable to CSRF.
+
+
+************************* Testing for SQLI *************************
+
+
+[+] The link is not vulnerable to SQL Injection.
+
